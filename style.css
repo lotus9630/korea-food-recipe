@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Yeon Sung", cursive;
+  background-color: #2d2013;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+nav.search > form {
+  display: flex;
+  justify-content: center;
+}
+
+input,
+button {
+  border: 1px solid #dedede;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-size: 14px;
+  padding: 8px 10px;
+  margin: 0;
+}
+
+input[type="text"] {
+  width: 400px;
+}
+
+.search-btn {
+  cursor: pointer;
+  border-left: 0;
+  border-radius: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+section.meals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin: 40px;
+}
+
+.meal {
+  cursor: pointer;
+  height: 180px;
+  width: 200px;
+  text-align: center;
+  margin: 10px;
+}
+
+.meal img {
+  width: 100%;
+  height: 100%;
+  border: 4px #fff solid;
+  border-radius: 2px;
+  transition: all ease 0.3s;
+}
+
+.meal img:hover {
+  transform: scale(1.1);
+}
+
+.meal div.meal-name {
+  font-size: 20px;
+}
+
+article.single-meal {
+  width: 450px;
+  display: none;
+}
+
+article.single-meal.show {
+  display: block;
+}
+
+.single-meal-name img {
+  width: 300px;
+  height: 250px;
+  margin: 15px;
+  border: 4px #fff solid;
+  border-radius: 2px;
+}
+
+.single-meal-name h2 {
+  margin: 20px;
+  padding: 10px;
+  border: 2px #e09850 dashed;
+  border-radius: 5px;
+  font-size: 30px;
+}
+
+.single-meal-gredients .gredient {
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  background-color: #fff;
+  display: inline-block;
+  color: #2d2013;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+}
+
+.single-meal-recipe {
+  font-size: 25px;
+}
+
+.single-meal-recipe ol {
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  section.meals {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  section.meals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meal {
+    height: 200px;
+    width: 250px;
+  }
+}
+@media (max-width: 500px) {
+  input[type="text"] {
+    width: 100%;
+  }
+
+  section.meals {
+    grid-template-columns: 1fr;
+  }
+
+  .meal {
+    height: 300px;
+    width: 400px;
+  }
+}
